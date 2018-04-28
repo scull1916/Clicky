@@ -12,10 +12,10 @@ class App extends Component {
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p className="App-intro">
+        </p><br />
+        <h1 className="App-intro">
           Coming soon...Clicky!
-        </p>
+        </h1>
       </div>
     );
   }

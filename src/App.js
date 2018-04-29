@@ -13,61 +13,61 @@ class App extends Component {
     image: [
       {
         id: 1,
-        image: "image-01",
+        image: "https://placehold.it/200x200",
         clicked: false
       },
       {
         id: 2, 
-        image: "image-02", 
+        image: "https://placehold.it/200x200", 
         clicked: false},
       {
         id: 3,
-        image: "image-03",
+        image: "https://placehold.it/200x200",
         clicked: false
       },
       {
         id: 4,
-        image: "image-04",
+        image: "https://placehold.it/200x200",
         clicked: false
       },
       {
         id: 5,
-        image: "image-05",
+        image: "https://placehold.it/200x200",
         clicked: false
       },
       {
         id: 6,
-        image: "image-06",
+        image: "https://placehold.it/200x200",
         clicked: false
       },
       {
         id: 7,
-        image: "image-07",
+        image: "https://placehold.it/200x200",
         clicked: false
       },
       {
         id: 8,
-        image: "image-08",
+        image: "https://placehold.it/200x200",
         clicked: false
       },
       {
         id: 9,
-        image: "image-09",
+        image: "https://placehold.it/200x200",
         clicked: false
       },
       {
         id: 10,
-        image: "image-10",
+        image: "https://placehold.it/200x200",
         clicked: false
       },
       {
         id: 11,
-        image: "image-11",
+        image: "https://placehold.it/200x200",
         clicked: false
       },
       {
         id: 12,
-        image: "image-12",
+        image: "https://placehold.it/200x200",
         clicked: false
       }
     ],
@@ -119,7 +119,7 @@ class App extends Component {
           topScore = {this.state.topScore}
         />
         <jumbo />
-        <gamecontainer
+        <gamecontainer>
           {
             this.state.image.map(image => 
               <images
@@ -130,10 +130,9 @@ class App extends Component {
                 clicked = {image.clicked}
               />
             )}
-        />
-
+        </gamecontainer>
+      </wrapper>
     );
-  }
-}
+};
 
 export default App;

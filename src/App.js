@@ -34,7 +34,7 @@ setClicked = id =>
     score = 0;
     message = "Aw man! You already clicked that one!";
 
-    for (i = 0; i < gameimages.length; i++)
+    for (let i = 0; i < gameimages.length; i++)
     {
       gameimages[i].clicked = false;
     }
@@ -73,7 +73,7 @@ setClicked = id =>
     topScore = 12;
     this.setState({ topScore });
 
-    for (i=0; i < gameimages.length; i++)
+    for (let i=0; i < gameimages.length; i++)
     {
       gameimages[i].clicked = false;
     }

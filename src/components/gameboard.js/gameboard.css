@@ -9,3 +9,8 @@
 .header-text {
     padding: 30px;
 }
+
+
+.flex-item {
+    width: 100%;
+}

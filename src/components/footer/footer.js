@@ -1,7 +1,7 @@
 import React from 'react';
 import './footer.css';
 
-const footer = props => (
+const Footer = props => (
 	<div className = "row fixed-bottom">
 		<footer className = "footer">
 			<div className = "innerFooter">
@@ -11,4 +11,4 @@ const footer = props => (
 	</div>
 );
 
-export default footer
+export default Footer

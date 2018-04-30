@@ -1,8 +1,8 @@
 import React from 'react';
 import './wrapper.css';
 
-const wrap = props => (
-<div className = "container-fluid wrapper">{props.children}</div>
+const Wrapper = props => (
+<div className = "wrapper">{props.children}</div>
 );
 
-export default wrap;
+export default Wrapper;

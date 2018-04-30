@@ -1,138 +1,117 @@
 import React, { Component } from 'react';
 import './App.css';
-import footer from './components/footer';
-import gamecontainer from './components/gamecontainer';
-import header from './components/header';
-import images from './components/images';
-import jumbo from './components/jumbo';
-import wrapper from './components/wrapper';
-import logo from './logo.svg';
+import Footer from './components/footer';
+import Gameboard from './components/gameboard';
+import Header from './components/header';
+// import Images from './components/images';
+import Jumbo from './components/jumbo';
+import Wrapper from './components/wrapper';
+import gameimages from './gameimages.json';
+
+
+let score = 0;
+let topScore = 0;
+let message = "Click on a picture to earn points. Take care not to click on the same image more than once!"
 
 class App extends Component {
   state = {
-    image: [
-      {
-        id: 1,
-        image: "https://placehold.it/200x200",
-        clicked: false
-      },
-      {
-        id: 2, 
-        image: "https://placehold.it/200x200", 
-        clicked: false},
-      {
-        id: 3,
-        image: "https://placehold.it/200x200",
-        clicked: false
-      },
-      {
-        id: 4,
-        image: "https://placehold.it/200x200",
-        clicked: false
-      },
-      {
-        id: 5,
-        image: "https://placehold.it/200x200",
-        clicked: false
-      },
-      {
-        id: 6,
-        image: "https://placehold.it/200x200",
-        clicked: false
-      },
-      {
-        id: 7,
-        image: "https://placehold.it/200x200",
-        clicked: false
-      },
-      {
-        id: 8,
-        image: "https://placehold.it/200x200",
-        clicked: false
-      },
-      {
-        id: 9,
-        image: "https://placehold.it/200x200",
-        clicked: false
-      },
-      {
-        id: 10,
-        image: "https://placehold.it/200x200",
-        clicked: false
-      },
-      {
-        id: 11,
-        image: "https://placehold.it/200x200",
-        clicked: false
-      },
-      {
-        id: 12,
-        image: "https://placehold.it/200x200",
-        clicked: false
-      }
-    ],
-    counter: 0,
-    topScore: 0
+    gameimages,
+    score,
+    topScore
   };
 
-  sortImages = (id, clicked) => {
-    const imageOrder = this.state.image;
+setClicked = id => 
+{
+  const gameimages = this.state.gameimages;
 
-    if (clicked)
-    {
-      console.log("true");
-      imageOrder.forEach((img, index) =>
-      {
-        imageOrder[index].clicked = false;
-      });
-      return this.setState(
-      {
-        image: imageOrder.sort(() => Math.floor((Math.random() * 12) + 1),
-        topScore: this.state.counter,
-        counter: 0
-      });
-    })
-    else
-    {
-      console.log("false");
-      imageOrder.forEach((img, index) => 
-      {
-        if (id === image.id)
-        {
-          imageOrder.index.clicked = true;
-        }
-      });
-      return this.setState(
-      {
-        image: imageOrder.sort(() => Math.floor((Math.random() * 12) + 1),
-        counter: this.state.counter + 1
-      });
-    })
-  };
+  const clickMatch = gameimages.filter(match => match.id === id);
 
+  if (clickMatch[0].clicked)
+  {
+    console.log("Score:" + score);
+    console.log("Top Score:" + topScore);
+
+    score = 0;
+    message = "Aw man! You already clicked that one!";
+
+    for (i = 0; i < gameimages.length; i++)
+    {
+      gameimages[i].clicked = false;
+    }
+
+    this.setState({ message });
+    this.setState({ score });
+    this.setState({ gameimages });
+  }
+  else if (score < 11)
+  {
+    clickMatch[0].clicked = true;
+
+    score ++;
+
+    if (score > topScore)
+    {
+      topScore = score;
+      this.setState = ({ topScore });
+    }
+
+    gameimages.sort(function(a, b)
+    {
+        return Math.floor((Math.random() * 12) + 1);
+    });
+
+        this.setState({ gameimages });
+        this.setState({ score });
+        this.setState({ message });
+  } else
+  {
+    clickMatch[0].click = true;
+
+    score = 0;
+
+    message = "You did it, great job!";
+    topScore = 12;
+    this.setState({ topScore });
+
+    for (i=0; i < gameimages.length; i++)
+    {
+      gameimages[i].clicked = false;
+    }
+
+    gameimages.sort(function(a, b) 
+  {
+    return Math.floor((Math.random() * 12) + 1)
+  });
+
+  this.setState({ gameimages });
+  this.setState({ score });
+  this.setState({ message });
+  }
+};
 
   render() {
     return (
-      <wrapper>
-        <header
+      <Wrapper>
+        <Header
           score = {this.state.counter}
           topScore = {this.state.topScore}
         />
-        <jumbo />
-        <gamecontainer>
+        <Jumbo />
+        <Gameboard>
           {
-            this.state.image.map(image => 
-              <images
-                key = {image.id}
-                sortImages = {this.sortImages}
-                id = {image.id}
-                src = {image.image}
-                clicked = {image.clicked}
+            this.state.gameimages.map(match => 
+              <Gameboard
+                key = {match.id}
+                images = {match.images}
+                id = {match.id}
+                clicked = {this.clicked}
               />
             )}
-        </gamecontainer>
-      </wrapper>
+        </Gameboard>
+        <Footer />
+      </Wrapper>
     );
-};
+  }
+}
 
 export default App;

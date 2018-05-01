@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Footer from './components/Footer';
 import Gameboard from './components/Gameboard';
-import Header from './components/Title';
-// import Images from './components/images';
+import Title from './components/Title';
 import Jumbo from './components/Jumbo';
 import Wrapper from './components/Wrapper';
 import gameimages from './gameimages.json';
@@ -24,7 +23,7 @@ setClicked = id =>
 {
   const gameimages = this.state.gameimages;
 
-  const clickMatch = gameimages.filter(match => match.id === id);
+  const clickMatch = gameimages.filter(gameimages => gameimages.id === id);
 
   if (clickMatch[0].clicked)
   {
@@ -92,23 +91,24 @@ setClicked = id =>
   render() {
     return (
       <Wrapper>
-        <Title
-          score = {this.state.counter}
-          topScore = {this.state.topScore}
-        />
-        <Jumbo />
+        <Title>
+          MEM aka Middle Earth Memory
+          Score = {this.state.score} | 
+          Top Score = {this.state.topScore}
+        </Title>
+        <Jumbo></Jumbo>
         <Gameboard>
           {
-            this.state.gameimages.map(match => 
+            this.state.gameimages.map(image => 
               <Gameboard
-                key = {match.id}
-                images = {match.images}
-                id = {match.id}
+                key = {gameimages.id}
+                images = {gameimages.images}
+                id = {gameimages.id}
                 clicked = {this.clicked}
-              />
+            />
             )}
         </Gameboard>
-        <Footer />
+        <Footer></Footer>
       </Wrapper>
     );
   }

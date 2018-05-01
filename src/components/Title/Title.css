@@ -6,6 +6,10 @@
     height: 100px;
 }
 
+.scores {
+    text-align: right;
+}
+
 .header-text {
     padding: 30px;
 }

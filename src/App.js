@@ -3,7 +3,6 @@ import './App.css';
 import Footer from './components/Footer';
 import Gameboard from './components/Gameboard';
 import Title from './components/Title';
-import Jumbo from './components/Jumbo';
 import Wrapper from './components/Wrapper';
 import gameimages from './gameimages.json';
 
@@ -92,21 +91,26 @@ setClicked = id =>
     return (
       <Wrapper>
         <Title>
-          MEM aka Middle Earth Memory <br />
+          <div className = "row text-left">
+          MEM aka Middle Earth Memory 
+          </div>
+          <div className = "row text-right">
           Score = {this.state.score} | 
           Top Score = {this.state.topScore}
+          </div>
+          <div className = "row">  
+              <h3 className = "text-center">How to play:</h3>
+              <h3 className = "text-center">Click on an image to begin. If you click the same image more than once, your score will reset to zero and you will restart the game.</h3>
+          </div>
         </Title>
-        <Jumbo>
-        </Jumbo>
-        <Gameboard>
-          {
-            this.state.gameimages.map(gameimages => 
+          {this.state.gameimages.map(gameimages => ( 
+            <Gameboard
                 key = {gameimages.id}
-                image = {gameimages.images}
+                image = {gameimages.image}
                 id = {gameimages.id}
                 clicked = {this.clicked}
-            )}
-        </>
+            />
+            ))}
         <Footer></Footer>
       </Wrapper>
     );

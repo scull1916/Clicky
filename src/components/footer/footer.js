@@ -4,9 +4,7 @@ import './Footer.css';
 const Footer = props => (
 	<div className = "row fixed-bottom">
 		<footer className = "footer">
-			<div className = "innerFooter">
-				<p className = "footer-p">Clicky Game</p>
-			</div>
+			<p className = "footer-p">Clicky Game</p>
 		</footer>
 	</div>
 );

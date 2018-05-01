@@ -92,22 +92,21 @@ setClicked = id =>
     return (
       <Wrapper>
         <Title>
-          MEM aka Middle Earth Memory
+          MEM aka Middle Earth Memory <br />
           Score = {this.state.score} | 
           Top Score = {this.state.topScore}
         </Title>
-        <Jumbo></Jumbo>
+        <Jumbo>
+        </Jumbo>
         <Gameboard>
           {
-            this.state.gameimages.map(image => 
-              <Gameboard
+            this.state.gameimages.map(gameimages => 
                 key = {gameimages.id}
-                images = {gameimages.images}
+                image = {gameimages.images}
                 id = {gameimages.id}
                 clicked = {this.clicked}
-            />
             )}
-        </Gameboard>
+        </>
         <Footer></Footer>
       </Wrapper>
     );

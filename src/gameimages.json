@@ -1,60 +1,72 @@
 [
       {
         "id": 1,
+        "name": "Arwen Evenstar",
         "image": "./assets/images/arwen.png",
         "clicked": false
       },
       {
-        "id": 2, 
+        "id": 2,
+        "name": "Balrog",
         "image": "./assets/images/balrog.png", 
         "clicked": false},
       {
         "id": 3,
+        "name": "Beorn",
         "image": "./assets/images/beorn.png",
         "clicked": false
       },
       {
         "id": 4,
+        "name": "Bilbo Baggins",
         "image": "./assets/images/bilbo.png",
         "clicked": false
       },
       {
         "id": 5,
+        "name": "Eowyn of Rohan",
         "image": "./assets/images/eowyn.png",
         "clicked": false
       },
       {
         "id": 6,
+        "name": "The Lady Galadriel",
         "image": "./assets/images/galadriel.png",
         "clicked": false
       },
       {
         "id": 7,
+        "name": "Gandalf the White",
         "image": "./assets/images/gandalf.png",
         "clicked": false
       },
       {
         "id": 8,
+        "name": "Smeagol Gollum",
         "image": "./assets/images/gollum.png",
         "clicked": false
       },
       {
         "id": 9,
+        "name": "Rivendell, The Last Homely House",
         "image": "./assets/images/rivendell.png",
         "clicked": false
       },
       {
         "id": 10,
+        "name": "The Endlessly Searching Eye of Sauron",
         "image": "./assets/images/sauron-eye.png",
         "clicked": false
       },
       {
         "id": 11,
+        "name": "Smaug the Dragon",
         "image": "./assets/images/smaug.png",
         "clicked": false
       },
       {
         "id": 12,
+        "name": "Tom Bombadil"
         "image": "./assets/images/tom-bombadil.png",
         "clicked": false
       }

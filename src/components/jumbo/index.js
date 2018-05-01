@@ -1,1 +1,1 @@
-export {default} from "./jumbo";
+export {default} from "./Jumbo";

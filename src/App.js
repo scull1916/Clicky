@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import Footer from './components/footer';
-import Gameboard from './components/gameboard';
-import Header from './components/header';
+import Footer from './components/Footer';
+import Gameboard from './components/Gameboard';
+import Header from './components/Title';
 // import Images from './components/images';
-import Jumbo from './components/jumbo';
-import Wrapper from './components/wrapper';
+import Jumbo from './components/Jumbo';
+import Wrapper from './components/Wrapper';
 import gameimages from './gameimages.json';
 
 
@@ -92,7 +92,7 @@ setClicked = id =>
   render() {
     return (
       <Wrapper>
-        <Header
+        <Title
           score = {this.state.counter}
           topScore = {this.state.topScore}
         />

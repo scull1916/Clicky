@@ -1,1 +1,1 @@
-export {default} from "./gameboard";
+export {default} from "./Gameboard";

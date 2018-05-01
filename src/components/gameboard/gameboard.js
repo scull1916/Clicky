@@ -1,5 +1,5 @@
 import React from 'react';
-import './gameboard.css';
+import './Gameboard.css';
 
 const Gameboard = props => (
 	<div onClick = {() => props.setClicked(props.id)} className = "gamepiece">

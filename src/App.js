@@ -91,16 +91,14 @@ setClicked = id =>
     return (
       <Wrapper>
         <Title>
-          <div className = "row text-left">
-          MEM aka Middle Earth Memory 
+          <div className = "header">
+          <h3 className ="title">MEM aka Middle Earth Memory</h3> 
+            <h3 className = "scores">Score = {this.state.score} | 
+            Top Score = {this.state.topScore}</h3>
           </div>
-          <div className = "row text-right">
-          Score = {this.state.score} | 
-          Top Score = {this.state.topScore}
-          </div>
-          <div className = "row">  
-              <h3 className = "text-center">How to play:</h3>
-              <h3 className = "text-center">Click on an image to begin. If you click the same image more than once, your score will reset to zero and you will restart the game.</h3>
+          <div className = "rules">  
+              <h3>How to play:</h3>
+              <h4>Click on an image to begin. If you click the same image more than once, your score will reset to zero and you will restart the game.</h4>
           </div>
         </Title>
           {this.state.gameimages.map(gameimages => ( 

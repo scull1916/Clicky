@@ -4,7 +4,7 @@ import './Title.css';
 const Title = props => (
 	<div className = "row fixed-top">
 		<div className = "header">
-			<h2 className = "title">{props.children}</h2>
+			<span className = "title">{props.children}</span>
 		</div>
 	</div>
 );

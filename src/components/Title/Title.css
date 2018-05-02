@@ -1,8 +1,12 @@
 .title {
-    background-color: #52359e;
+    background-color: #381501;
     color: white;
     position: fixed;
-    width: 100%;
-    padding-left: 5%
-    
+    padding-left: 2em;
+    text-align: left;
+    margin-bottom: 50%;
 }
+
+
+  
+

@@ -1,15 +1,10 @@
 .footer {
-    background-color: #6a57a9;
+    background-color: #023817;
     width: 100%;
     position: relative;
 }
 
-.innerFooter {
-    background-color: #52359e;
-    color: white;
-    position: absolute; left: 0; bottom: 0; right: 0;
-}
-
 .footer-p {
     padding-left: 25px;
+    color: white;
 }
